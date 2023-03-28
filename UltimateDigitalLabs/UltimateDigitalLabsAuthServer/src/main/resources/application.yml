@@ -1,0 +1,11 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: auth-server
+  config:
+    import: optional:configserver:http://localhost:8012
+    name: UDLConfigServer
+
+
+  #eureka.client.service-url.defaultZone= http://localhost:8010/eureka

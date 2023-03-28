@@ -1,0 +1,90 @@
+<div class="detail-section">
+  <div class="container">
+    <form [formGroup]="movieAddForm" (ngSubmit)="onMovieAdd()">
+      <div class="row">
+        <div class="col-4 p-3">
+          <img src="../../../assets/placeholder.png" class="detail-image" />
+        </div>
+        <div class="col-6">
+          <div class="main-content">
+            <div class="container-fluid">
+              <!-- Movie form group -->
+              <div class="form-area">
+                <h3>Movie</h3>
+                <div class="row">
+                  <div class="col-md-2"><label>Title</label></div>
+                  <div class="col-md-9">
+                    <div class="input-space">
+                      <input formControlName="movieTitle" type="text" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-2"><label>Budget</label></div>
+                  <div class="col-md-9">
+                    <div class="input-space">
+                      <input formControlName="movieCost" type="text" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-2"><label>Year</label></div>
+                  <div class="col-md-9">
+                    <div class="input-space">
+                      <input formControlName="movieYear" type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="row"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <hr />
+          Actors:         
+          <h4>Actors: {{ actorList }}</h4>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="container text-center">
+        <h1>Add actors</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Actor full Name</th>
+                <th>Add</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let actor of actors">
+                <td>{{ actor.firstName }} {{ actor.lastName }}</td>
+                <td>
+                  <button
+                    class="btn btn-outline-dark"
+                    type="button"
+                    (click)="actorsAdded(actor)"
+                  >
+                    +
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary">Add movie</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "ff1be85b-be69-4c62-aa0b-f6d21f2e3797",
+		"name": "CAPSTONE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18115780"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082/actors-ms/api/v1/actors/movie/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/actors-ms/api/v1/actors/movie/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"actors-ms",
+						"api",
+						"v1",
+						"actors",
+						"movie",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GEt_movie_byId(without_gateWay)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v1/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_movies_by_actorId(without_gateWay)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v1/movies/byactorid/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"byactorid",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Review_with_Kafka_queue(without_apiGateWay)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"datePosted\": \"22.02.2023\",\r\n    \"description\": \"I am robot\",\r\n    \"rating\": 4,\r\n    \"movieId\": 34\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Movie(via-GateWay)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\": 1,\r\n    \"movieTitle\": \"Home alone\",\r\n    \"movieCost\": 550002,\r\n    \"movieYear\": 1995\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/movies-ms/api/v1/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"movies-ms",
+						"api",
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actor_update(Through_gateWay)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2, \r\n    \"firstName\": \"Nick\",\r\n     \"lastName\": \"Smith\",\r\n     \"gender\": \"M\", \r\n     \"age\": \"69\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/actors-ms/api/v1/actors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"actors-ms",
+						"api",
+						"v1",
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_All_actors(Via_GateWay)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/actors-ms/api/v1/actors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"actors-ms",
+						"api",
+						"v1",
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actor_Update(Without_Gateway)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2, \r\n    \"firstName\": \"aaaa\",\r\n     \"lastName\": \"ddd\",\r\n     \"gender\": \"W\", \r\n     \"age\": \"69\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/actors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Movie_By_Id_(Via_GateWay)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/movies-ms/api/v1/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"movies-ms",
+						"api",
+						"v1",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Movies_By_ActorId(via_Gateway)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/actors-ms/api/v1/actors/bymovieid/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"actors-ms",
+						"api",
+						"v1",
+						"actors",
+						"bymovieid",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_list-reviews_by_MovieId(via_GateWay)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reviewId\": 56,\r\n    \"datePosted\": \"22.02.2023\",\r\n    \"description\": \"I am robot-2\",\r\n    \"rating\": 4,\r\n    \"movieId\": 34\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/movies-ms/reviews/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"movies-ms",
+						"reviews",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding_review_toMovie_with_Kafka_(via_GateWay)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"datePosted\": \"22.02.2023\",\r\n    \"description\": \"I am robot-5\",\r\n    \"rating\": 4,\r\n    \"movieId\": 34\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/movies-ms/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"movies-ms",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_List_of_movies_By_actor_id(via-gateway)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/actors-ms/api/v1/actors/moviesbyactor/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"actors-ms",
+						"api",
+						"v1",
+						"actors",
+						"moviesbyactor",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

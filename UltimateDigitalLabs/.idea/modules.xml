@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JWTToken/JWTToken.iml" filepath="$PROJECT_DIR$/JWTToken/JWTToken.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabs.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabsActorMs/UltimateDigitalLabsActorMs.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabsActorMs/UltimateDigitalLabsActorMs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabsAdminMs/UltimateDigitalLabsAdminMs.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabsAdminMs/UltimateDigitalLabsAdminMs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabsApiGateWay/UltimateDigitalLabsApiGateWay.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabsApiGateWay/UltimateDigitalLabsApiGateWay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabsAuthServer/UltimateDigitalLabsAuthServer.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabsAuthServer/UltimateDigitalLabsAuthServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabsConfigServer/UltimateDigitalLabsConfigServer.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabsConfigServer/UltimateDigitalLabsConfigServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabsDiscoveryService/UltimateDigitalLabsDiscoveryService.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabsDiscoveryService/UltimateDigitalLabsDiscoveryService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabsMoviesMs/UltimateDigitalLabsMoviesMs.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabsMoviesMs/UltimateDigitalLabsMoviesMs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UltimateDigitalLabsReview/UltimateDigitalLabsReview.iml" filepath="$PROJECT_DIR$/UltimateDigitalLabsReview/UltimateDigitalLabsReview.iml" />
+    </modules>
+  </component>
+</project>

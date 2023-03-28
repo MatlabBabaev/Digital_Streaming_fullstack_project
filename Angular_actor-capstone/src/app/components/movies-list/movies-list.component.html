@@ -1,0 +1,35 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col col-lg-2">
+          <button type="button" routerLink="/addmovie">
+            <span class="fa-stack fa-2x">
+              <i class="fa-solid fa-video-camera fa-stack-2x"></i>
+              <i class="fa fa-plus-circle fa-2xs fa-stack fa-inverse"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div
+          *ngFor="let tempMovie of movies | appFilter : parent.filteredStatus"
+          class="col-md-3"
+        >
+          <div class="product-box">
+            <img src="../../../assets/placeholder.png" class="img-responsive" />
+            <h1>{{ tempMovie.movieTitle }}</h1>
+            <div class="price">
+              {{ tempMovie.movieCost | currency : "USD" }}
+            </div>
+            <a routerLink="/movies/{{ tempMovie.movieId }}" class="primary-btn"
+              >More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: review-ms
+  config:
+    import: optional:configserver:http://localhost:8012
+    name: UDLConfigServer
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        hbm2ddl:
+          auto: update
+        format_sql: true
+    show-sql: true
+server:
+  port: 8085
+kafka:
+  consumer_topic_name: REVIEW_SERVICE

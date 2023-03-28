@@ -1,0 +1,55 @@
+    <div class="detail-section">
+      <div class="container">
+        <form [formGroup]="actorForm" (ngSubmit)="onAddActor()">
+          <div class="row">
+            <div class="col-6">
+              <div class="main-content">
+                <div class="container-fluid">
+                  <!-- Actor form group -->
+                  <div class="form-area">
+                    <h3>Actor</h3>
+                    <div class="row">
+                      <div class="col-md-2"><label>First name</label></div>
+                      <div class="col-md-9">
+                        <div class="input-space">
+                          <input formControlName="firstName" type="text" />
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-2"><label>Last name</label></div>
+                      <div class="col-md-9">
+                        <div class="input-space">
+                          <input formControlName="lastName" type="text" />
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-2"><label>Age</label></div>
+                      <div class="col-md-9">
+                        <div class="input-space">
+                          <input type="number" formControlName="age" name="quantity" min="1" max="120"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"><label>Gender</label></div>
+                      <div class="col-md-9">
+                        <div class="input-space">
+                          <input formControlName="gender" type="text" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                          <button type="submit" class="btn btn-secondary btn-lg btn-block">Create actor</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>

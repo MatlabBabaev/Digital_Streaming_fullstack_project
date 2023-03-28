@@ -1,0 +1,47 @@
+<div class="container" style="padding-top: 15px">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col col-lg-2">
+      <button type="button" routerLink="/addActor">
+        <i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <br />
+  <div *ngIf="formLoaded">
+    <table class="table table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>lastName</th>
+          <th>Age</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let actor of actors | appFilter : parent.filteredStatus">
+          <!-- <tr *ngFor="let actor of actors" [routerLink]="['actors', actor.id]"></tr> -->
+          <td>
+            <img
+              src="../../../assets/{{ actor.gender }}.png"
+              height="50"
+              (click)="editActor(actor.id)"
+            />
+          </td>
+          <td>{{ actor.firstName }}</td>
+          <td>{{ actor.lastName }}</td>
+          <td>{{ actor.age }}</td>
+          <td>
+            <button type="button" (click)="editActor(actor.id)">
+              <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+            </button>
+            &nbsp; &nbsp;  &nbsp;<button type="button" (click)="onDeleteActor(actor.id)">
+              <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

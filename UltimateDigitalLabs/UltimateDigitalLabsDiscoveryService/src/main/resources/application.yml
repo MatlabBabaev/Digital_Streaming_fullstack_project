@@ -1,0 +1,17 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: ultimate-digital-labs-discovery-service
+  devtools:
+    restart:
+      enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    prefer-ip-address: true

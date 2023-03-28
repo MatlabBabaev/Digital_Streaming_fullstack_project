@@ -1,0 +1,118 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-300">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div
+          class="card shadow-2-strong card-registration"
+          style="border-radius: 15px"
+        >
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">New User registration</h3>
+            <form class="row g-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <input
+                  type="hidden"
+                  formControlName="userId"
+                  class="form-control"
+                  value="0"
+                  readonly
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  formControlName="fullName"
+                  class="form-control"
+                  title="User name should not contain numbers and special charecters."
+                  [ngClass]="{ 'is-invalid': submitted && f['fullName'].errors }"
+                />
+                <div
+                  *ngIf="submitted && f['fullName'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['fullName'].errors['required']">
+                    Name is required
+                  </div>
+                  <div *ngIf="f['fullName'].errors['pattern']">
+                    Username should not contain numbers and special charecters
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  formControlName="email"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                />
+                <div
+                  *ngIf="submitted && f['email'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['email'].errors['required']">
+                    Email is required
+                  </div>
+                  <div *ngIf="f['email'].errors['email']">
+                    Invalid entry for type email
+                  </div>
+                  <div
+                    *ngIf="
+                      this.form.controls['email'].errors['mailAlreadyInUse']
+                    "
+                  >
+                    Email is already in use
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                  title="Password should be a combination of at least an uppercase alphabet, lowercase 
+                        alphabets, a digit, and a special character"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['password'].errors
+                  }"
+                />
+                <!-- <span class="text-danger" *ngIf="form.controls['password'].touched && f['password'].errors['password']">Password is Required</span> -->
+                <div
+                  *ngIf="submitted && f['password'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['password'].errors['required']">
+                    Password is required
+                  </div>
+                  <div *ngIf="f['password'].errors['pattern']">
+                    Password should be a combination of at least an uppercase
+                    alphabet, lowercase alphabets, a digit and at least one of
+                    these ?=.*[*@!#%&()^~ charecters
+                  </div>
+
+                  <!-- <<div *ngIf="f['password'].errors['matchRegExpression1']">Password should be a combination of at least an uppercase alphabet, lowercase 
+                                alphabets, a digit, and at least one of these  ?=.*[*@!#%&()^~{} charecters</div> -->
+                </div>
+              </div>
+
+              <div class="form-group">
+                <button class="btn btn-primary">
+                  <span
+                    *ngIf="loading"
+                    class="spinner-border spinner-border-sm mr-1"
+                  ></span>
+                  Register
+                </button>
+                <!-- <label for="userMsg" class="form-label">{{userMsg}}</label> -->
+                <a routerLink="/login" class="btn btn-link">Cancel</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

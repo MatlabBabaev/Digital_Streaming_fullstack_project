@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Actor Details: </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- <style>
+     
+    </style> -->
+  </head>
+  <body>
+    <div class="container" *ngIf="formDataLoaded">
+      <div class="row">
+        <div class="col">
+       <!-- <form [formGroup]="actorForm" (ngSubmit)="onActorUpdateSubmit()"> -->
+        <form [formGroup]="actorForm" (ngSubmit)="onActorUpdateSubmit()">
+        <h1>Actor Details: </h1>
+        <img  src="../../../assets/M.png" height="50"/>
+        <div class="info">
+          <label for="movieName" class="form-label" formControlName="id"></label>
+          <label for="movieName" class="form-label" >Actor's first name</label>
+          <input type="text"  formControlName="firstName">
+          <label for="movieName" class="form-label" >Actor's last name</label>
+          <input type="text"  formControlName="lastName">
+          <label for="movieName" class="form-label" >Actor's gender</label>
+          <input type="text"  formControlName="gender">
+          <label for="movieName" class="form-label" >Actor's age</label>
+          <input type="text"  formControlName="age">
+        </div>
+        <button class="btn btn-primary">Save changes</button>        
+      </form>
+    </div>
+    <div class="col">
+      <h3>Movies {{actor.firstName}} {{actor.lastName}} starred</h3>      
+      <table *ngIf="moviesLoaded" class="table">
+        <thead class="table-dark">
+          <tr>
+            <th>Movie title</th>
+            <th>Cost</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let movie of movies">
+            <td>{{ movie.movieTitle }}</td>
+            <td>{{ movie.movieCost}}</td>
+            <td>{{ movie.movieYear}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>      
+    </div>
+  </body>
+</html>

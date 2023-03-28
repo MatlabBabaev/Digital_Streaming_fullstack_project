@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/UltimateDigitalLabsDiscoveryService/pom.xml" />
+        <option value="$PROJECT_DIR$/UltimateDigitalLabsApiGateWay/pom.xml" />
+        <option value="$PROJECT_DIR$/UltimateDigitalLabsMoviesMs/pom.xml" />
+        <option value="$PROJECT_DIR$/UltimateDigitalLabsActorMs/pom.xml" />
+        <option value="$PROJECT_DIR$/UltimateDigitalLabsConfigServer/pom.xml" />
+        <option value="$PROJECT_DIR$/UltimateDigitalLabsReview/pom.xml" />
+        <option value="$PROJECT_DIR$/UltimateDigitalLabsAuthServer/pom.xml" />
+        <option value="$PROJECT_DIR$/JWTToken/pom.xml" />
+        <option value="$PROJECT_DIR$/UltimateDigitalLabsAdminMs/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

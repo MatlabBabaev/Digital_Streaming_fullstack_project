@@ -1,0 +1,22 @@
+server:
+  port: 8765
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: optional:configserver:http://localhost:8012
+    name: UDLConfigServer
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true

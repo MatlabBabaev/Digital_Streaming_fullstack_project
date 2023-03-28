@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="UltimateDigitalLabsReview" />
+        <module name="UltimateDigitalLabsAdminMs" />
+        <module name="UltimateDigitalLabsMoviesMs" />
+        <module name="UltimateDigitalLabsAuthServer" />
+        <module name="UltimateDigitalLabsActorMs" />
+        <module name="UltimateDigitalLabsDiscoveryService" />
+        <module name="UltimateDigitalLabsConfigServer" />
+        <module name="UltimateDigitalLabsApiGateWay" />
+        <module name="JWTToken" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JWTToken" target="17" />
+      <module name="UltimateDigitalLabsActorMs" target="17" />
+      <module name="UltimateDigitalLabsAdminMs" target="17" />
+      <module name="UltimateDigitalLabsApiGateWay" target="17" />
+      <module name="UltimateDigitalLabsAuthServer" target="17" />
+      <module name="UltimateDigitalLabsConfigServer" target="17" />
+      <module name="UltimateDigitalLabsDiscoveryService" target="17" />
+      <module name="UltimateDigitalLabsMoviesMs" target="17" />
+      <module name="UltimateDigitalLabsReview" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="JWTToken" options="-parameters" />
+      <module name="UltimateDigitalLabsActorMs" options="-parameters" />
+      <module name="UltimateDigitalLabsAdminMs" options="-parameters" />
+      <module name="UltimateDigitalLabsApiGateWay" options="-parameters" />
+      <module name="UltimateDigitalLabsAuthServer" options="-parameters" />
+      <module name="UltimateDigitalLabsConfigServer" options="-parameters" />
+      <module name="UltimateDigitalLabsDiscoveryService" options="-parameters" />
+      <module name="UltimateDigitalLabsMoviesMs" options="-parameters" />
+      <module name="UltimateDigitalLabsReview" options="-parameters" />
+    </option>
+  </component>
+</project>
